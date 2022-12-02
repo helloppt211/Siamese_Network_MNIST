@@ -19,4 +19,5 @@ jobs:
         uses: OrlovM/Wiki-Action@v1
         with:
           path: './wiki/result.txt'
+          token: ${{ secrets.GITHUB_TOKEN }}
          

@@ -14,7 +14,9 @@ jobs:
       - name: 'Pull'
         run: git clone https://github.com/helloppt211/Siamese_Network_MNIST.wiki.git wiki
       - name: 'Get Weather'
-        run: bash ./weather.sh
+        run: 
+          bash ./weather.sh
+          git commit -a -m "Add changes"
       - name: 'Get Date'
         run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       - name: Update wiki

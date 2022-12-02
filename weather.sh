@@ -12,3 +12,5 @@ curl \
   -H "User-Agent: $UA" \
   -o "Siamese_Network_MNIST.wiki/1.md" \
   wttr.in/$CITY?format=4\&$UNIT
+cd Siamese_Network_MNIST.wiki
+pwd

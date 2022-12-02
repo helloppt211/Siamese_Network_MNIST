@@ -12,7 +12,7 @@ jobs:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
       - name: 'Pull'
-        run: git clone https://github.com/helloppt211/Siamese_Network_MNIST.wiki.git wiki 
+        run: git clone https://github.com/helloppt211/Siamese_Network_MNIST.wiki.git wiki2 
       - name: 'Get Weather'
         run: bash ./weather.sh
       - name: 'Get Date'
@@ -20,6 +20,6 @@ jobs:
       - name: Update wiki
         uses: OrlovM/Wiki-Action@v1
         with:
-          path: './wiki/result.txt'
+          path: './wiki2/'
           token: ${{ secrets.GITHUB_TOKEN }}
          

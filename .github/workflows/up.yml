@@ -20,6 +20,4 @@ jobs:
       - name: 'Get Weather'
         run: 
           bash ./weather.sh
-          git commit -a -m "Add changes"
-          git add 1.md
-          git push "https://$GITHUB_ACTOR:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.wiki.git"
+          

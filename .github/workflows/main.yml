@@ -20,6 +20,6 @@ jobs:
       - name: Update wiki
         uses: OrlovM/Wiki-Action@v1
         with:
-          path: 'wiki'
+          path: 'Siamese_Network_MNIST.wiki'
           token: ${{ secrets.GITHUB_TOKEN }}
          

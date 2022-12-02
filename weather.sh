@@ -15,6 +15,7 @@ curl \
 cd Siamese_Network_MNIST.wiki
 pwd
 ls
+cat 1.md
 
 
 git commit -a -m "Add changes"

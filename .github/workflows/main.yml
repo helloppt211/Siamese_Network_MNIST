@@ -12,7 +12,7 @@ jobs:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
       - name: 'Pull'
-        run: git clone https://github.com/helloppt211/Siamese_Network_MNIST.wiki.git
+        run: git clone https://github.com/helloppt211/Siamese_Network_MNIST.wiki.git wiki
       - name: 'Get Weather'
         run: bash ./weather.sh
       - name: 'Get Date'

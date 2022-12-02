@@ -14,3 +14,4 @@ curl \
   wttr.in/$CITY?format=4\&$UNIT
 cd Siamese_Network_MNIST.wiki
 pwd
+ls

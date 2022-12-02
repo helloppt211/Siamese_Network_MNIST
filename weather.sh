@@ -15,3 +15,8 @@ curl \
 cd Siamese_Network_MNIST.wiki
 pwd
 ls
+
+
+git commit -a -m "Add changes"
+git add .
+git push "https://$GITHUB_ACTOR:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.wiki.git"

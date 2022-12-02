@@ -4,6 +4,8 @@ name: Update Wiki
 
 # recommended
 on:
+  schedule:
+    - cron: '5 5 * * *'
   push:
     paths:
       - 'wiki/**'

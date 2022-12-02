@@ -17,3 +17,6 @@ jobs:
         run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       - name: Update wiki
         uses: OrlovM/Wiki-Action@v1
+        with:
+          path: './wiki/result.txt'
+         

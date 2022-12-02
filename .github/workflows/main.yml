@@ -1,32 +1,25 @@
-name: 'GitHub Actions Weather Bot'
+name: Update Wiki
 
+# on: [push]
+
+# recommended
 on:
   push:
-  schedule:
-    - cron: '5 * * * *'
+    paths:
+      - 'wiki/**'
+    branches:
+      - master
 
 jobs:
-  bot:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout codes'
-        uses: actions/checkout@v1
-      - name: Update wiki
-        uses: OrlovM/Wiki-Action@v1
+      - uses: actions/checkout@v1
+
+      - uses: ineshbose/wiki-action@v1
         with:
-          path: 'wiki'
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: 'Pull'
-        run: git clone https://github.com/helloppt211/Siamese_Network_MNIST.wiki.git
-      - name: 'Get Weather'
-        run: 
-          bash ./weather.sh
-          git commit -a -m "Add changes"
-      - name: 'Get Date'
-        run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
-      - name: Update wiki
-        uses: OrlovM/Wiki-Action@v1
-        with:
-          path: 'wiki'
-          token: ${{ secrets.GITHUB_TOKEN }}
-         
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WIKI_DIR: 'wiki'
+          AUTO_SIDEBAR: true
+
+

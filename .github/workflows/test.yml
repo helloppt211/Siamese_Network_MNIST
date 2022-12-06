@@ -12,25 +12,17 @@ jobs:
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content to github runner
 
-      - name: create a file
+      - name: pull create push a file
         run:
           #touch newfile.txt
-          curl -o result.htm -k http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp
-   
-          
-      - name: commit files
-        run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          #git stash
-
-          #git pull --allow-unrelated-histories
-
-          #git stash pop
-          git reset --hard
           git pull
+          curl -o result.htm -k http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp
           git add -A
           git commit -m "update data" -a
+          
+
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
         with:

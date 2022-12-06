@@ -15,13 +15,14 @@ jobs:
       - name: create a file
         run:
           #touch newfile.txt
-          curl -o result.htm wttr.in/guangzhou
+          curl -o result.htm wttr.in/shanghai
    
           
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git pull --allow-unrelated-histories
           git add -A
           git commit -m "update data" -a
       - name: push changes

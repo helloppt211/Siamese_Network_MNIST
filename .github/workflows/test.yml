@@ -15,7 +15,7 @@ jobs:
       - name: create a file
         run:
           #touch newfile.txt
-          curl -o result.html wttr.in/guangzhou
+          curl -o result.htm wttr.in/guangzhou
    
           
       - name: commit files

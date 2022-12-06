@@ -1,15 +1,19 @@
-name: Push commit
+name: Commit Date
 on: push
+
 jobs:
-  report:
+  run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Create report file
         run: date +%s > report.txt
-      - name: Commit report
-        run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email "action@github.com"
-          git commit -am "Automated report"
-          git push
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v8
+        with:
+          author_name: Your Name
+          author_email: mail@example.com
+          message: 'Your commit message'
+          add: 'report.txt'

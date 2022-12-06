@@ -22,7 +22,12 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git stash
+
           git pull --allow-unrelated-histories
+
+          git stash pop
+
           git add -A
           git commit -m "update data" -a
       - name: push changes

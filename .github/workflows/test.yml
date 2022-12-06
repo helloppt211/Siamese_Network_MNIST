@@ -14,8 +14,8 @@ jobs:
 
       - name: create a file
         run:
-          touch newfile.txt
-          
+          #touch newfile.txt
+          curl -o result.html wttr.in/guangzhou
    
           
       - name: commit files
@@ -28,4 +28,4 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          branch: master

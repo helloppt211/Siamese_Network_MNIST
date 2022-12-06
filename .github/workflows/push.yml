@@ -13,7 +13,7 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v8
         with:
-          author_name: Your Name
-          author_email: mail@example.com
+          author_name: GitHub Actions
+          author_email: Actions@GitHub.com
           message: 'Your commit message'
-          add: 'report.txt'
+          add: 'report1.txt'

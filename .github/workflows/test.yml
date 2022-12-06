@@ -2,7 +2,7 @@ name: test
 on:
   push:
   schedule:
-    - cron: 6 * * * *
+    - cron: 6 6 * * *
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
       - name: create a file
         run:
           #touch newfile.txt
-          curl -o result.htm time.is/Beijing
+          curl -o result.htm -k http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp
    
           
       - name: commit files
